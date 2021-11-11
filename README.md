@@ -11,9 +11,9 @@ Since I had a lot of fun with this project and because I love open-source code, 
 - Python >=3.6 with the following libraries installed: `numpy`, `numpy-stl`, `matplotlib`, `hexy`, `vpython` (the last one is optional if you don't care about rendering the debug visualizations)
 - A 3D printer
   - I used a Creality Ender 3 v2 which I was reasonably happy with, but any FDM printer with a reasonable build volume should work fine.
-- PLA filament [[amazon.com/dp/B01EKEMFQS]](amazon.com/dp/B01EKEMFQS)
-- 1-inch hexagonal mirror tiles [[amazon.com/dp/B08CSCNT86]](amazon.com/dp/B08CSCNT86)
-- Cyanoacrylate glue [[amazon.com/dp/B01LYO4R4I]](amazon.com/dp/B01LYO4R4I)
+- PLA filament [[https://wwww.amazon.com/dp/B01EKEMFQS]](amazon.com/dp/B01EKEMFQS)
+- 1-inch hexagonal mirror tiles [[https://wwww.amazon.com/dp/B08CSCNT86]](amazon.com/dp/B08CSCNT86)
+- Cyanoacrylate glue [[https://wwww.amazon.com/dp/B01LYO4R4I]](amazon.com/dp/B01LYO4R4I)
   - It is important that you use glue that doesn't expand when it cures or it will mess up the very sensitive mirror angles! A very thin coating of cyanoacrylate glue is sufficient to hold the mirrors in place.
 - Optional: some hair spray or 3D printing adhesive spray (to keep large prints from warping)
 
