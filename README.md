@@ -8,19 +8,21 @@ Since I had a lot of fun with this project and because I love open-source code, 
 
 ## Supplies
 
-- Python >=3.6 with the following libraries installed: `numpy`, `numpy-stl`, `matplotlib`, `hexy`, `vpython` (the last one is optional if you don't care about rendering the debug visualizations)
+- Python 3 and Jupyter with the following libraries installed: `numpy`, `matplotlib`, `numpy-stl`, `hexy`, `vpython`
+  - `vpython` is optional if you don't care about rendering the ray tracing visualizations
 - A 3D printer
-  - I used a Creality Ender 3 v2 which I was reasonably happy with, but any FDM printer with a reasonable build volume should work fine.
-- PLA filament [[amazon.com/dp/B01EKEMFQS]](https://amazon.com/dp/B01EKEMFQS)
-- 1-inch hexagonal mirror tiles [[amazon.com/dp/B08CSCNT86]](https://amazon.com/dp/B08CSCNT86)
-- Cyanoacrylate glue [[amazon.com/dp/B01LYO4R4I]](https://amazon.com/dp/B01LYO4R4I)
-  - It is important that you use glue that doesn't expand when it cures or it will mess up the very sensitive mirror angles! A very thin coating of cyanoacrylate glue is sufficient to hold the mirrors in place.
-- Optional: some hair spray or 3D printing adhesive spray (to keep large prints from warping)
+  - I bought a Creality Ender 3 v2 for this project, which I am reasonably happy with, but any FDM printer with a reasonable build volume and ~.1mm accuracy should work fine.
+  - Optional: some hair spray or 3D printing adhesive spray (to keep large prints from warping)
+- Any decent PLA filament: [[amazon.com/dp/B01EKEMFQS]](https://amazon.com/dp/B01EKEMFQS)
+- 1-inch hexagonal mirror tiles: [[amazon.com/dp/B08CSCNT86]](https://amazon.com/dp/B08CSCNT86) or [[amazon.com/dp/B07DF5W7L6]](https://www.amazon.com/dp/B07DF5W7L6/)
+- Cyanoacrylate glue: [[amazon.com/dp/B01LYO4R4I]](https://amazon.com/dp/B01LYO4R4I)
+  - Most "super glue" is this type. You can use any glue that can bind plastic to glass, but it is important that you use glue that doesn't expand when it cures or it will mess up the very sensitive mirror angles! A very thin coating of cyanoacrylate glue is sufficient to hold the mirrors in place - too much glue can also distort the angles.
+- The Sun
 
 
 ## Computing the mirror angles
 
-The basic idea here is that we have an array of mirrors forming a hexagonal grid. Each mirror is located with its centroid at some point in space, and we want for it to reflect a ray of sunlight to a pixel at some location on the ground (or any other focal plane). Since we know where each mirror is, where each corresponding target is, and where the sun is, we can solve for how each mirror needs to be oriented in 3D space in order to reflect the sunlight onto its corresponding target.
+The basic idea is that we have an array of mirrors forming a hexagonal grid. Each mirror is located with its centroid at some point in space, and we want for it to reflect a ray of sunlight to a pixel at some location on the ground (or any other focal plane). Since we know where each mirror is, where each corresponding target is, and where the sun is, we can solve for how each mirror needs to be oriented in 3D space in order to reflect the sunlight onto its corresponding target.
 
 Consider just a single mirror and a single target pixel. The center of the mirror has <img src="svgs/4fae0f09ce5106b5af1515d439e30216.svg?invert_in_darkmode" align=middle width=53.80914pt height=24.65759999999998pt/> coordinates located at some vector `mirror_pos`, and the center of the target pixel is at `target_pos`. Let's define vectors <img src="svgs/25e75aceff4861d00c722555a2a6e9a2.svg?invert_in_darkmode" align=middle width=27.037725000000005pt height=23.488740000000007pt/> such that <img src="svgs/f44b301d2c8004d063e24e84c70dde5d.svg?invert_in_darkmode" align=middle width=26.97387000000001pt height=23.488740000000007pt/>`mirror_pos` - `target_pos` is the vector pointing from the target to the mirror center, and <img src="svgs/c7760aec58964807181eb1a8f2893ae6.svg?invert_in_darkmode" align=middle width=229.812825pt height=24.65759999999998pt/> is the vector pointing in the direction of the sun (a point source placed at infinity). Here we're assuming the sun is at an inclination of <img src="svgs/27e556cf3caa0673ac49a8f0de3c73ca.svg?invert_in_darkmode" align=middle width=8.173588500000005pt height=22.831379999999992pt/> from the horizon and that the azimuthal angle relative to the mirror is <img src="svgs/f50853d41be7d55874e952eb0d80c53e.svg?invert_in_darkmode" align=middle width=9.794565000000006pt height=22.831379999999992pt/>.
 
