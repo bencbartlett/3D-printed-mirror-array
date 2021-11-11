@@ -2,12 +2,9 @@
 
 I recently got engaged to the wonderful person holding the hexagonal mirror thingy in the photo below. We're both huge nerds and I wanted to do something unique for a proposal, so I designed and 3D printed a mirror array to ask the question for me. The mirrors are angled so that just before sunset on our 8th anniversary, it reflects the light from the setting sun onto the ground to spell out "MARRY ME?"
 
-![](img/propose.jpeg)
+![](img/header.jpg)
 
 Since I had a lot of fun with this project and because I love open-source code, I figured I'd publish all the source code I wrote to generate the 3D printed model and make a writeup of how I designed this. It is straightforward to modify the code to produce a 3D-printable mirror array to project any arbitrary image onto any focal plane.
-
-![](img/collage.jpg)
-
 
 ## Supplies
 
