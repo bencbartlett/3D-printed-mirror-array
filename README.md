@@ -109,3 +109,9 @@ By the time I finished mounting all of the mirrors, it was the night before I wa
 This was the first project I've done with 3D printing (and in fact I got into 3D printing specifically to do this idea), and it felt like magic having a fabricator sitting in my bathroom that could just bring this idea into existence from nothing but a bit of code and some basic principles of physics.
 
 ![](img/IMG_3009.jpeg)
+
+
+https://user-images.githubusercontent.com/6800253/141389938-2314ee70-1af4-4b23-bdde-341c7c5900be.mp4
+
+
+
